@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="judul"></h1>
+	<button onclick="ubahjudul()">Ubah Si Judul</button>
+	<button onclick="ubah()">SINI</button>
+	<div  id="kotak" style="width: 200px; height: 200px;background-color:tomato;" onmouseover="ubahKotak()" ></div>
+	<script>
+	  function ubahjudul() {
+		document.getElementById("judul").innerHTML =
+		"judulnya";
+		
+	}
+	function ubah() {
+		document.getElementById("judul").innerHTML =
+		"wakwakwakkaw";
+		document.getElementById("judul").style.color = 
+		"red";
+		document.getElementById("judul").style.textAlign = 
+		"center";
+		
+	}
+	function ubahKotak(){
+		document.getElementById("kotak").style.backgroundColor =
+		"skyblue";
+	}
+	</script>
+</body>
+</html>

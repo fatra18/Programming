@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Dom</title>
+    <style>
+        #box {
+            width:0px;
+            height:0px;
+          
+            transition:all 1000ms;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            transform: translate(0%,80%);
+            
+        }
+        #container {
+         width:0px;
+         height:0px;
+         background-color:rgb(225, 123, 13);
+         transition:all 1000ms;
+       
+         margin-top: 140px;
+    
+        }
+
+        #langit{
+            transition: 100ms;
+            width:0px;
+         height:0px;
+         margin-top: 50px;
+         margin-left: 20px;
+       
+        }
+
+        #bulan{
+         width: 0px;
+         height: 0px;
+         border-right: 0px solid transparent;
+         border-bottom: 0px solid yellow;
+         border-left:0px solid transparent ;
+         position: relative;
+         left: -190px;
+         transform: translate(0%,100%);
+         
+        }
+
+        #bumi{
+            
+            width: 0%;
+            height:0%;
+            position: relative;
+           
+        }
+      
+    </style>
+</head>
+<body style="height: 2100px; ">
+    <h1>Javascript V2 muji </h1>
+    <button onclick="step1()">Step1</button>
+    <button onclick="step2()">Step2</button>
+    <button onclick="step3()">Step3</button>
+    <button onclick="step4()">Step4</button>
+    <button onclick="step5()">Step5</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="All()">All</button>
+    <hr>
+        <div id="warna">
+            <div id="box">
+            
+                <div id="container">
+                
+                    <div id="langit">
+                    
+                    </div>
+                    
+                    <center><div id="bulan"></div> </center> 
+                   
+                    
+                   
+                </div>
+               
+            
+                
+            
+            </div>
+        </div>    
+          
+       
+    <!-- script -->
+    <script>
+        
+        var box = document.getElementById("box");
+        var container = document.getElementById("container");
+        var langit = document.getElementById("langit");
+        var bulan = document.getElementById("bulan");
+        var warna = document.getElementById("warna");
+        
+      
+      
+        
+        function step1(){
+            box.style.width ="30%";
+            box.style.height ="290px";
+            box.style.backgroundColor ="green";
+            box.style.margin="auto";
+            box.style.marginTop="40px";
+        }
+
+        function step2(){
+            container.style.width= "30%";
+            container.style.height= "50%";
+            container.style.opacity= 1;
+            container.style.transformTranslate="150%";
+        }
+        function step3(){
+            langit.style.backgroundColor="black";
+            langit.style.width="20px";
+            langit.style.height="20px";
+            langit.style.borderRadius="20px";
+           
+        }
+
+        function step4(){
+            bulan.style.transform="translate(0%,-180%)";
+            bulan.style.borderLeft="250px solid transparent";
+            bulan.style.borderBottom="250px solid yellow";
+            bulan.style.borderRight="250px solid transparent";
+          
+        }
+
+        function step5(){
+            warna.style.backgroundColor="silver";
+            warna.style.width="100%";
+            warna.style.height="1000px";
+            warna.style.transform="translate(0%,-4%)";
+        }
+        
+        function reset(){
+            box.style.width ="0%";
+            box.style.height ="0px";
+            box.style.transform="translate(0%.80%)"
+            container.style.width= "0%";
+            container.style.height= "0%";
+            container.style.opacity= 0;
+            langit.style.width="0px";
+            langit.style.height="0px";
+            bulan.style.borderLeft="0px solid transparent";
+            bulan.style.borderBottom="0px solid yellow";
+            bulan.style.borderRight="0px solid transparent";
+            warna.style.width="0%";
+            warna.style.height="0px";
+          
+        }
+
+        function All(){
+            box.style.width ="30%";
+            box.style.height ="290px";
+            box.style.backgroundColor ="green";
+            box.style.margin="auto";
+            box.style.marginTop="40px";
+            container.style.width= "30%";
+            container.style.height= "50%";
+            container.style.opacity= 1;
+            container.style.transformTranslate="150%";
+            langit.style.backgroundColor="black";
+            langit.style.width="20px";
+            langit.style.height="20px";
+            langit.style.borderRadius="20px";
+            bulan.style.transform="translate(0%,-180%)";
+            bulan.style.borderLeft="250px solid transparent";
+            bulan.style.borderBottom="250px solid yellow";
+            bulan.style.borderRight="250px solid transparent";
+            warna.style.backgroundColor="silver";
+            warna.style.width="100%";
+            warna.style.height="1000px";
+            warna.style.transform="translate(0%,-4%)";
+          
+        }
+        
+       
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Tugas5</title>
+	</head>
+	<body>
+	<h3>Persegi</h3>
+  	<input id="CELCIUS" type="number" placeholder="hitungsuhu" onkeyup="hitungsuhu()"/>
+  	<p>Frenheit = <span id=franheit><sup>0</sup>K</span></p>
+  	<p>Kelvin = <span id=kelvin><sup>0</sup>K</span></p>
+  	<p>Reamur = <span id=reamur><sup>0</sup>K</span></p>
+  
+  	<script>
+  	
+	 var celcius = document.getElementById("CELCIUS");  	
+	 var frenheit = document.getElementById("frenheit");
+	 var kelvin = document.getElementById("kelvin");
+	 var reamur = document.getElementById("reamur");
+      
+	  	
+  	 function hitungsuhu( ){
+  	 	franheit.innerHTML  =  (celcius.value  *  9/5 + 32)  + "m<sup>0</sup>";
+		kelvin.innerHTML  =  (273  + +  celcius.value)  + "m<sup>0</sup>";
+		reamur.innerHTML  =  (4/5  *  celcius.value)  + "m<sup>0</sup>";
+		  	   	   	 
+  	 
+  	 }
+  	 
+  	 	
+      	 		
+			
+	</script>
+	</body>
+</html>

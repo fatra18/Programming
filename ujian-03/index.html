@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Dom</title>
+    <style>
+        #box {
+            width:0px;
+            height:0px;
+            background-color:#fff;
+            transition:all 1000ms;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            
+        }
+        #container {
+            width:0px;
+            height:0px;
+            background-color:#fff;
+            transition:all 1000ms;
+            opacity: 0;
+            
+        }
+        #langit{
+            width: 100%;
+            height: 80%;
+            background-color: lightskyblue;
+        }
+        #bulan{
+            position:relative;
+            right:120px;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            transition: 1000ms;
+            background-color: #fff;
+        }
+        #bumi{
+            width: 100%;
+            height: 20%;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <h1>Javascript V2 muji </h1>
+    <button onclick="step1()">Step1</button>
+    <button onclick="step2()">Step2</button>
+    <button onclick="nightMode()">nightmode</button>
+    <button onclick="bulan()">bulan</button>
+    <hr>
+    <div id="box">
+        <div id="container">
+            <div id="langit">
+                <div id="bulan">
+
+                </div>
+            </div>
+            <div id="bumi"></div>
+        </div>
+    </div>    
+    <!-- script -->
+    <script>
+        var box = document.getElementById("box");
+        var container = document.getElementById("container");
+        var langit = document.getElementById("langit");
+        var bulan = document.getElementById("bulan");
+        function step1(){
+            box.style.width ="500px%";
+            box.style.height ="500px";
+            box.style.backgroundColor ="green";
+        }
+
+        function step2(){
+            container.style.width= "95%";
+            container.style.height= "90%";
+            container.style.opacity= 1;
+        }
+        function nightMode(){
+            langit.style.backgroundColor="black";
+            bulan.style.marginLeft="1000px";
+           
+        }
+        function bulan(){
+           
+        } 
+    
+    </script>
+    
+</body>
+</html>

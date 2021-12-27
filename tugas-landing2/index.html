@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  
+  
+ 
+  <!-- js splide -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  
+  <!-- boostrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    .content{
+      background-image: url('https://images.unsplash.com/photo-1612477691321-967456bc1c30?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+      background-size: cover;
+
+      width: 100%;
+      height: 850px;
+      display: flex;
+    
+    }
+    .article{
+      display:flex;
+      justify-content: space-around;
+      margin-top: 30px;
+     
+    }
+    .isi{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .jarallax{
+            height:400px;
+            width:30%;
+            background-size:cover;
+            position:relative;
+            left:0px;
+            margin-top:20px;
+        }
+  
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light  " style="height: 80px;">
+    <div class="container-fluid">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src=https://cdn.dribbble.com/users/2987584/screenshots/6088405/3.png alt="" width="40" height="30" class="d-inline-block align-top">
+          PATE
+        </a>
+      </div>    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- img content -->
+  <div class="content">
+    <div class="d-flex justify-content-center d-flex align-items-center w-100 p-3 ">
+      <p class="text-center" style="font-size:65px; color:white; ">Technology Smartphone</p>
+    </div>
+  </div>
+  
+  <!-- content-article -->
+  <p class="text-center" style="font-size: 35px;">Article</p>
+  <div class="article">
+    <div class="isi">
+      <img src="./image/photo-1584438784894-089d6a62b8fa.webp" style="width: 200px; height:200px; border-radius: 30px;" alt="">
+      <p class="" style="width: 200px; text-align: center;">Lorem ipsum dolor sit amet brconsectetur.adipisicing elit.</p>
+      <button type="button" class="btn btn-dark" style="width: 100px;">info</button>
+    </div>
+    <div class="isi">
+      <img src="./image/photo-1584438784894-089d6a62b8fa.webp" style="width: 200px; height:200px; border-radius: 30px;" alt="">
+      <p class="" style="width: 200px; text-align: center;">Lorem ipsum dolor sit amet brconsectetur.adipisicing elit.</p>
+      <button type="button" class="btn btn-dark" style="width: 100px;">info</button>
+    </div>
+    <div class="isi">
+      <img src="./image/photo-1584438784894-089d6a62b8fa.webp" style="width: 200px; height:200px; border-radius: 30px;" alt="">
+      <p class="" style="width: 200px; text-align: center;">Lorem ipsum dolor sit amet brconsectetur.adipisicing elit.</p>
+      <button type="button" class="btn btn-dark" style="width: 100px;">info</button>
+    </div>
+  </div>
+  
+  <!-- img-splide -->
+  <div class="splide">
+    <div class="splide__track">
+        <ul class="splide__list">
+            <li class="splide__slide"><img src="./image/photo-1584438784894-089d6a62b8fa.webp" alt=""></li>
+            <li class="splide__slide"><img src="./image/photo-1584438784894-089d6a62b8fa.webp" alt=""></li>
+            <li class="splide__slide"><img src="./image/photo-1584438784894-089d6a62b8fa.webp" alt=""></li>
+        </ul>
+    </div>
+  </div>
+<!-- js splide -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script>
+    new Splide( '.splide', {
+  type   : 'loop',
+  padding: {
+  right: '17rem',
+  left : '20rem',
+
+  } ,
+  } ).mount();       
+</script>
+
+<!-- jarallax -->
+<div data-jarallax data-speed="-0.2" class="jarallax">
+  <img class="jarallax-img" src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80 " alt="">
+</div>
+
+<!-- form -->
+<div class="w-75 p-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+</div>
+<div class="w-75 p-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+
+<!-- js jarallax -->
+<script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+
+   <!-- Boostrap Javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
+    crossorigin="anonymous">
+  </script>
+</body>
+</html>
+<div class="splide">
+  <div class="splide__track">
+      <ul class="splide__list">
+          <li class="splide__slide"><img src="./image/06.jpg" alt=""style="width: 365px;" ></li>
+          <li class="splide__slide"><img src="./image/05.jpg" alt=""style="width: 365px;" ></li>
+          <li class="splide__slide"><img src="./image/04.jpg" alt=""style="width: 365px;" ></li>
+          <li class="splide__slide"><img src="./image/03.jpg" alt=""style="width: 365px;" ></li>
+          <li class="splide__slide"><img src="./image/02.jpg" alt=""style="width: 365px;" ></li>
+          <li class="splide__slide"><img src="./image/01.jpg" alt=""style="width: 365px;" ></li>
+      </ul>
+  </div>
+</div>
+<div>
+  <div class="img-overlay">
+
+  </div>
+</div>

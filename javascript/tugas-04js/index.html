@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="FA"></h1> 
+	<button onclick="KLIK()">TOLONG UBAH INI</button>
+	<script>
+	//Properties
+	var mobil = {
+	    roda: 4,
+	    kursi: 8,
+	    pintu: 5,		
+	
+	beli: function(a){
+        console.log("ini uang beli" + a);
+    	},
+    	jual: function(){
+        console.log("ini method jual");
+    	}
+	}
+	mobil.beli(mobil.roda);
+	console.log(mobil.roda);
+	//***
+	function KLIK(){
+		document.getElementById("FA").innerHTML =
+		"Ada Apa";
+		document.getElementById("FA").style.color = 
+		"lavender";
+		document.getElementById("FA").style.textAlign = 
+		"right";
+		
+	}
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+.body{
+    height: 2000px;
+}
+
+/* gambar 1 */
+.ractangle{
+    width: 400px;
+    height: 400px;
+    background-color: #293462;
+    border: 5px solid #f3b00f;
+    transition: 1000ms;
+    cursor:grab ;
+
+}
+
+.ractangle:hover{
+    transform: rotate(45deg);
+    margin-left: 200px;
+    background-color: cadetblue;
+    
+}
+
+.see{
+    display: flex;
+    width: 100%;
+    transform: translate(10%,250%);
+}
+
+.see :hover{
+    background-color: aqua;
+    
+  
+}
+
+
+.mata{
+    height:60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: #fff1c1;
+    transform: translate(7%,-120%);
+    transition: 500ms;
+    
+}
+
+.mata:hover{
+    width: 20%;
+}
+
+.mata1{
+    height:60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: #fff1c1;
+    margin-right: 20px;
+    transform: translate(60%,-120%);
+    transition: 500ms;
+}
+
+.mata1:hover{
+    width: 20%;
+}
+
+.mulut{
+  background-color: #fff1c1;
+  width: 45px;
+  height: 10px;
+  border-radius: 20px;
+  transform: translate(174%,1010%);
+
+}
+
+
+
+.muka{
+    width: 200px;
+    height: 200px;
+    background-color: #fe5f55;
+    transform: translate(50%,50%);
+    border-radius:20rem 20rem 9rem 9rem ;
+    overflow: hidden;
+
+}
+
+.muka:hover{
+ background-color: darkgoldenrod;
+}
+
+.bola1{
+    width: 95px;
+    height: 95px;
+    border-radius: 50px;
+    background-color: #fff1c1;
+    transform: translate(10%,-120%);  
+}
+.bola2{
+    width: 95px;
+    height: 95px;
+    border-radius: 50px;
+    background-color: #fff1c1;
+    transform: translate(104%,-220%);  
+}
+
+
+/* gambar 2 */
+.ractangle1{
+    background-color: #191919;
+    width: 400px;
+    height: 400px;
+    border: 5px solid #18a0FB;
+    margin-top: 40px;
+    transition: 1000ms;
+
+}
+.ractangle1:hover{
+    background-color: #2f5d62;
+    border-radius: 20rem 20rem 5rem 5rem;
+}
+.kotak1{
+    width: 250px;
+    height: 350px;
+    background-color: #f2ad43;
+    border-radius: 20rem 20rem 5rem 5rem;
+    overflow: hidden;
+    transform: translate(0%,7%);
+    transition: 1000ms;
+}
+
+.kotak1:hover{
+    background-color: #ffe268;
+
+}
+
+.circle{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: #fff1c1;
+    transform: translate(0%,210%);
+    
+}
+
+.circle:hover{
+    background-color: #ffb037;
+    transition: 800ms;
+}
+
+.big-circle1{
+    background-color: #e08027;
+    width: 400px;
+    height: 400px;
+    border-radius: 400px;
+    transform: translate(-55%,20%);
+    transition: 500ms;
+}
+.big-circle1:hover{
+    background-color: #364547;
+}
+.big-circle2{
+    background-color: #824b20;
+    width: 400px;
+    height: 400px;
+    border-radius: 400px;
+    transform: translate(17%,-80%);
+}
+
+.big-circle2:hover{
+    background-color: darkgray;
+}
+/* gambar 3 */
+
+.ractangle2{
+   
+    background-color: #1A4341;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+   
+    margin-top: 100px;
+    overflow: hidden;
+    border: 5px solid  #18a0FB;
+
+}
+
+.ractangle2:hover{
+    border-radius: 10rem 10rem 20rem 20rem;
+}
+
+.logo{
+   overflow: visible;
+}
+
+.pengurung{
+    position: relative;
+}
+
+.pengurung .persegi-1{
+    width: 250px;
+    height: 30px;
+    background-color: #f3ac3c;
+
+}
+.pengurung .persegi-1:hover{
+    background-color: darkgreen;
+}
+.pengurung .persegi-2{
+    width: 250px;
+    height: 30px;
+    background-color: #f3ac3c;
+    margin-top: 20px;
+   
+}
+.pengurung .persegi-2:hover{
+    background-color: #293462;
+}
+.pengurung .persegi-3{
+    width: 250px;
+    height: 30px;
+    background-color: #f3ac3c;
+    margin-top: 20px;
+
+}
+.pengurung .persegi-3:hover{
+    background-color: #824b20;
+}
+.pengurung .persegi-4{
+    width: 250px;
+    height: 30px;
+    background-color: #f3ac3c;
+    margin-top: 20px;
+   
+}
+
+.pengurung .persegi-4:hover{
+    background-color: rgb(164, 32, 191);
+}
+.pengurung .persegi-5{
+    width: 250px;
+    height: 30px;
+    background-color: #f3ac3c;
+    margin-top: 20px;
+   
+}
+.pengurung .persegi-5:hover{
+    background-color: rgb(216, 47, 47);
+}
+.lingkaran{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    
+}
+.lingkaran .lingkaran1{
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    background-color: #1A4341;
+    left: 190px;
+    top:-270px;
+    padding:20px 0px 0px 20px ;
+    transform: translate(60%,-85%);
+
+}
+.lingkaran .lingkaran2{
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    background-color: #1A4341;
+    left: -260px;
+    top:-270px;
+    padding:20px 0px 0px 20px ;
+    transform: translate(-80%,-185%);
+}

@@ -1,0 +1,392 @@
+<?php
+include './config/koneksi.php';
+$id = $_GET['id'];
+$query = "SELECT * FROM users WHERE id = $id";
+$result = mysqli_query($koneksi, $query);
+
+$data = mysqli_fetch_assoc($result); 
+
+$comment_query ="SELECT * FROM comments WHERE article_id = $id";
+$result_comment = mysqli_query($koneksi ,$comment_query);
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- js splide -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    
+      <!-- boostrap css -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      
+      <!-- link icons -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+      
+      <!-- link font -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;1,200;1,300&display=swap" rel="stylesheet"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet"> 
+
+      <!-- Link animasi -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+      <link rel="stylesheet" href="style.css">
+
+      <!-- choices css -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+      <!--choices script -->
+      <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+      
+      <title>Document</title>
+  </head>
+  <body style="height:000px">
+ 
+      
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light " style="background-color:black; ">
+          <div class="container-fluid " style="height: 70px; margin-top: 15px;width: 100%;">
+              <a class="navbar-brand" href="#">
+                  <img src="./image/free-logo-png-4.png" alt="" width="59" height="50" class="d-inline-block align-top" style="margin-left:1px ;margin-bottom: 10px;">
+              </a>
+              <p style="color: honeydew;">FATRA</p>
+          
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex flex-row bd-highlight mb-3 d-flex justify-content-center" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active " aria-current="page" href="#" style="color: honeydew;font-family: 'Quicksand', sans-serif; font-weight: 900;">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: honeydew;  font-family: 'Quicksand', sans-serif; font-weight: 900;">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: honeydew; font-family: 'Quicksand', sans-serif; font-weight: 900;">CLIENTS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: honeydew; font-family: 'Quicksand', sans-serif; font-weight: 900;">LATEST WORKS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: honeydew; font-family: 'Quicksand', sans-serif; font-weight: 900;">WORK PROCESS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: honeydew; font-family: 'Quicksand', sans-serif; font-weight: 900;">PROCESS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="news.php" style="color: honeydew; font-family: 'Quicksand', sans-serif; font-weight: 900;">BLOG</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: honeydew; font-family: 'Quicksand', sans-serif; font-weight: 900;">CONTACT</a>
+                </li>
+                <li class="nav-item" style="transform: translate(100%,20%); ">
+                  <i class="bi bi-facebook"  style="font-size: 17px; color: honeydew; margin-right: 15px;"></i>
+                  <i class="bi bi-twitter"   style="font-size: 17px; color: honeydew; margin-right: 15px;"></i>
+                  <i class="bi bi-linkedin"  style="font-size: 17px; color: honeydew; margin-right: 15px;"></i>
+                  <i class="bi bi-instagram" style="font-size: 17px; color: honeydew; margin-right: 15px;"></i>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+      </nav>
+      
+      <!-- header -->
+      <div class="header-img">
+          <div class="header-content">
+            <h6>HI THERE.</h6>
+            <h1>I&nbsp;'&nbsp;M &nbsp;FATRA &nbsp;DINATA</h1>
+            <p>JUNIOR WEB DEVELOPER</p>
+          </div>
+          <button type="button" class="btn btn-outline-danger" style="height: 50px; width: 200px; transform: translate(490%,370%);">DOWNLOAD CV</button>
+      </div>  
+
+        
+      <!-- jarallax -->
+      <div class="content">
+            <div data-jarallax data-speed="0.2" class="jarallax">
+              <img class="jarallax-img" src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80 " alt="">
+            </div>
+            <h5>CODING IS MY PASSION.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,<br>
+            fuga necessitatibus possimus quia aliquid dolore nemo suscipit nisi delectus<br>
+            quidem beatae optio facilis accusantium aperiam cumque quod eligendi cum? Quo.<br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>
+            <br> <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+            Sint deserunt odit reiciendis tempora modi suscipit officiis,<br>
+            </p>
+            <div class="link">
+              <a href="#">LATEST WORKS</a>  
+              <i class="bi bi-arrow-right-short"></i>
+            </div>
+            <div class="skills-content">
+                <div class="skills">
+                  <h1>My Skills</h1>
+                  <li>
+                    <h3>HTML5</h3><span class="bar"><span class="html"></span></span>
+                  </li>
+                  <li>
+                    <h3>CSS</h3><span class="bar"><span class="css"></span></span>
+                  </li>
+                  <li>
+                    <h3>JAVASCRIPT</h3><span class="bar"><span class="javascript"></span></span>
+                  </li>
+                  
+                </div>
+                <div class="skills1">
+                  <li>
+                    <h3>PHP</h3><span class="bar"><span class="php"></span></span>
+                  </li>
+                  <li>
+                    <h3>DESING</h3><span class="bar"><span class="design"></span></span>
+                  </li>
+                  <li>
+                    <h3>EDITOR</h3><span class="bar"><span class="editor"></span></span>
+                  </li>
+                  
+                </div>
+            </div>  
+            
+            
+            
+      </div>
+
+      <div class="worked">
+        <h5>I Have Worked With These Amazing Clients.</h5>
+        <div class="fill">
+          <span  data-aos="zoom-in" class="img01">
+            <img src="./image/01.png" alt="">
+            <img src="./image/02.png" alt="">
+            <img src="./image/03.png" alt="">
+            <img src="./image/04.png" alt="">
+            <img src="./image/05.png" alt="">
+        
+            <img src="./image/06.png" alt="">
+            <img src="./image/07.png" alt="">
+            <img src="./image/08.png" alt="">
+            <img src="./image/09.png" alt="">
+            <img src="./image/10.png" alt="">
+          </span> 
+        </div>
+      </div>
+      <!-- img-splide -->
+      <div class="splide-img pb-5">
+        <div class="splide-header d-flex justify-content-between" style="width:100%;">
+          <h5 style="color: white;transform: translate(50%,500%); font-size: 25px;">MY LATEST WORKS.</h5>
+          <p style="transform: translate(300%,680%);color: #A32B21;">VIEW ALL WORKS</p>
+          <i class="bi bi-arrow-right-short" style="color:#A32B21; transform: translate(-350%,410%);"></i>
+        </div>
+        <div>
+          <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list pb-5">
+                    <li class="splide__slide pb-5 mt-3"><img src="./image/06.jpg" alt=""style="width: 365px;margin-top:200px;" ></li>
+                    <li class="splide__slide pb-5 mt-3"><img src="./image/05.jpg" alt=""style="width: 365px; margin-top:200px;" ></li>
+                    <li class="splide__slide pb-5 mt-3"><img src="./image/04.jpg" alt=""style="width: 365px;margin-top:200px; " ></li>
+                    <li class="splide__slide pb-5 mt-3"><img src="./image/03.jpg" alt=""style="width: 365px;margin-top:200px;" ></li>
+                    <li class="splide__slide pb-5 mt-3"><img src="./image/02.jpg" alt=""style="width: 365px;margin-top:200px;" ></li>
+                    <li class="splide__slide pb-5 mt-3"><img src="./image/01.jpg" alt=""style="width: 365px;margin-top:200px;" ></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Work process -->
+      <div class="Work">
+          <div class="overlay">
+            <h5 style="color: white; transform: translate(238%,20%); font-size: 24px;">MY WORK PROCESS</h5>
+            
+          <div class="work-trap">
+            <div class="work-icons">
+              <i class="bi bi-search"></i>
+            </div>
+            <div class="title">
+              <h6>RESEARCH</h6>
+              <p>Writing the perfect paper is a lot<br>
+                like a military operation. It takes<br>
+                &nbsp;&nbsp;discipline, foresight, research. </p>
+            </div>
+          </div>
+
+          <div class="work-trap">
+            <div class="work-icons">
+              <i class="bi bi-layer-forward"></i>
+            </div>
+            <div class="title">
+              <h6>FORWARD</h6>
+              <p>Writing the perfect paper is a lot<br>
+                like a military operation. It takes<br>
+                &nbsp;&nbsp;discipline, foresight, research. </p>
+            </div>
+          </div>
+
+          <div class="work-trap">
+            <div class="work-icons">
+              <i class="bi bi-code"></i>
+            </div>
+            <div class="title">
+              <h6>CODING</h6>
+              <p>Writing the perfect paper is a lot<br>
+                like a military operation. It takes<br>
+                &nbsp;&nbsp;discipline, foresight, research. </p>
+            </div>
+          </div>
+        
+          <div class="work-trap">
+            <div class="work-icons">
+              <i class="bi bi-cast"></i>
+            </div>
+            <div class="title">
+              <h6>CAST</h6>
+              <p>Writing the perfect paper is a lot<br>
+                like a military operation. It takes<br>
+                &nbsp;&nbsp;discipline, foresight, research. </p>
+            </div>
+          </div>
+        
+          </div>
+      </div>
+     
+      <div class="comment" >
+          <div class="d-flex justify-content-sm-between flex-column align-items-center" style="transform: translate(0%,30%);">
+                <h4 style="color:#A32B21; font-size: 50px; margin-top: 20px;">99</h4>
+                <h5 style="color: white; margin-top: 15px;">"You can design and create, and build the most wonderfull place in<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the world,But it takes people to make dream a reality"</h5>
+                  <div style="width: 100px; height:100px;border-radius: 60px; background-image:url('./image/ayo-ogunseinde-sibVwORYqs0-unsplash.jpg'); background-position:center; background-size:cover;"></div>  
+                <h6 style="color: white; font-weight: 500; margin-top: 20px;">ROOBOT ADWORDO</h6>
+                <p style="color: white;">-Future Alpha Designer-</p>
+
+          </div>
+      </div>
+
+      <!-- form -->
+      <div style=" background-color: #000; transform: translate(0%,-47%); height: 900px;">
+        <h2 style="color: white;font-weight:500; transform: translate(10%,430%);"> Let's Talk About How I Can Help You.</h2>
+      <div class="d-flex justify-content-between w-100">
+        
+        <div class="form-icons" style="transform: translate();">
+          <i class="bi bi-envelope"></i>
+        </div>
+        <div class="text-icons" style="margin-right: 0px; margin-top: 10px;">
+          <h5 style="color: #A32B21;  font-size: 17px; font-family: 'Quicksand', sans-serif; font-weight: 700; transform: translate(70%,1400%);">EMAIL ADDRESS</h5>
+          <p style="color: #fff; transform: translate(70%,610%);">
+            dauodma@gmail.com<br>
+            info@isik-template.com
+          </p>
+        </div> 
+
+        <div class="form-icons" style="">
+          <i class="bi bi-envelope"></i>
+        </div>
+        <div class="text-icons" style="margin-right: 0px; margin-top: 10px;">
+          <h5 style="color: #A32B21;  font-size: 17px; font-family: 'Quicksand', sans-serif; font-weight: 700; transform:translate(90%,1400%);">PHONES</h5>
+          <p style="color: #fff; transform:translate(90%,610%);">
+            002 011 58222 588<br>
+            002 010 01314 089
+          </p>
+        </div> 
+
+        <div class="form-icons" style="">
+          <i class="bi bi-envelope"></i>
+        </div>
+        <div class="text-icons" style="margin-right: 0px; margin-top: 10px;">
+          <h5 style="color: #A32B21;  font-size: 17px; font-family: 'Quicksand', sans-serif; font-weight: 700; transform:translate(50%,1400%); ">ADDRESS</h5>
+          <p style="color: #fff; transform: translate(50%,610%);">
+            121 King Street, Melbourne Victoria<br> 3000, Australia.
+          </p>
+        </div> 
+
+        <div>
+          <button type="button" class="btn btn-outline-danger" style="width: 200px; height: 60px; transform: translate(-60%,1150%);" >SEND IT</button>
+        </div>
+      </div>   
+  
+        <div class="mb-3" style="transform: translate(10%,440%);">
+            <label for="exampleFormControlInput1" class="form-label "></label>
+            <input type="email" class="form-control" id="single-element" placeholder="NAME" style="width: 40%; height:50px;">
+        </div>
+      
+        <div class="mb-3" style="transform: translate(10%,410%);">
+            <label for="exampleFormControlInput1" class="form-label"></label>
+            <input type="email" class="form-control " id="single-element" placeholder="EMAIL" style="width: 40%; height:50px;">
+        </div>
+
+        <div class="mb-3" style="transform: translate(10%,380%);">
+            <label for="exampleFormControlInput1" class="form-label"></label>
+            <input type="email" class="form-control " id="multiple-select" placeholder="SUBJECT" style="width: 40%; height:50px;" >
+        </div>
+
+        <div class="mb-3 " style="transform: translate(51%,27%);">
+            <label for="exampleFormControlTextarea1" class="form-label"></label>
+            <textarea class="form-control" id="multiple-select" rows="3" style="width:  40%;height: 183px;" placeholder="MASSAGE"></textarea>
+        </div>
+      </div>
+
+      
+
+      
+      <!-- footer -->
+      <div style="background-color: #212121; width: 100%; height: 150px; transform: translate(0%,-425px);">
+          <div class="footerr d-flex justify-content-center mx-2">
+            <div class="footer-icons mx-4">
+            <i class="bi bi-facebook"></i>
+            </div>
+            <div class="footer-icons mx-4">
+              <i class="bi bi-twitter"></i>
+            </div>
+            <div class="footer-icons mx-4">
+              <i class="bi bi-linkedin"></i>
+            </div>
+            <div class="footer-icons mx-4">
+              <i class="bi bi-instagram"></i>
+            </div>
+          
+          </div>
+          <p style="color: #fff; text-align: center; margin-top: 30px;">Copyrights © 2019. ISIK. — Responsive Personal Portfolio WordPress Template. Crafted with Love by STYLEXTHEME.</p>
+      </div>
+          
+      <!-- js splide -->
+      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+      <script>
+      new Splide( '.splide', {
+      type   : 'loop',
+      padding: {
+      right   : '17rem',
+      left    : '45rem',
+      
+      } ,
+      } ).mount();       
+      </script>
+    <!-- js jarallax -->
+      <script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+
+    <!-- animasi -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        const single = new Choices(document.getElementById('single-element'), {
+            editItems:true,
+            removeItemButton:true,
+        });
+        const multiple = new Choices(document.getElementById('multiple-select'), {
+            removeItemButton:true,
+        });    
+
+    </script>
+
+
+      
+    
+  </body>      
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>Pertemuan 9 Object </title>
+	
+</head>
+<body>
+	
+	<h1> JS Object </h1>
+	<br>
+	
+	<div id="wow"></div>
+	
+	<script>
+	   var motor = {
+	   	//properties
+	   	merek: 'TVS',
+	   	roda: 2,
+	   	spion: 2,
+	   	stang: 1,
+	   	
+	   	//Methods
+	   	start: function(){
+	   	  console.log('ini start ke' + a)
+	   	},
+	   	
+	   	stop: function(){
+	   	  console.log('ini stop ke' + b)
+	   	},
+	   	
+	   	roda: {
+	   	  pelek: 'besi',
+	   	  pentil: 'ijo',
+	   	  
+	   	ban: {
+	   	  dalem: 'lentur',
+	   	  luar: 'kertas',
+	   	  kesana:'keatas'	
+	   	}
+	   	
+	   	muter: function(arah){
+	   	 console.log('biaya muter gaes, ke' + arah)
+	   	},
+	   	
+	   	terbuat: function(terbuat){
+	   	 console.log(peleknya terbuat dari' + terbuat)
+	   	}	
+	      }
+	    }	
+	   motor.start()
+	   motor.stop()
+	   console.log(motor.merek + motor.spion)
+	   
+	   console.log(motor.roda.ban.luar);	
+	   
+	   motor.roda.muter("belakang");
+	</script>
+</body>
+</html>
+

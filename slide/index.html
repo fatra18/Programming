@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <title>Document</title>
+    <style>
+        img{
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide"><img src="https://cdn.idntimes.com/content-images/community/2020/09/03-230c5b9bfca4d74be366cf90687e7e45_600x400.jpg" alt=""> Slide 01</li>
+                <li class="splide__slide"><img src="https://cdn.idntimes.com/content-images/community/2020/09/03-230c5b9bfca4d74be366cf90687e7e45_600x400.jpg" alt=""> Slide 02</li>
+                <li class="splide__slide"><img src="https://cdn.idntimes.com/content-images/community/2020/09/03-230c5b9bfca4d74be366cf90687e7e45_600x400.jpg" alt=""> Slide 03</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script>
+       new Splide( '.splide', {
+	type   : 'loop',
+	padding: {
+		right: '10rem',
+		left : '20rem',
+	},
+} ).mount();
+
+
+
+    </script>
+</body>
+</html>

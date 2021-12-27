@@ -1,0 +1,353 @@
+body{
+    overflow-x:hidden ;
+    background-color:#141414;
+}
+.header-img {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 510px;
+    background-image: url(./image/malik-earnest-xgxzqRpK0UE-unsplash.jpg);
+}
+
+.header-content{
+    transform: translate(10%,250%);
+}
+
+.header-content h6{
+    color: red;
+}
+
+.header-content h1{
+    font-weight: bold;
+    color: white;
+    font-size: 45px;
+}
+
+.header-content p{
+    color: white;
+}
+
+.header-button button{
+    width: 200px;
+    height: 70px;
+    text-align: center;
+}
+
+.header-button h5{
+    text-align: center;
+}
+
+.jarallax{
+    height: 450px;
+    width: 31%;
+    background-size: cover;
+    transform: translate(30%,35%);
+    margin-top: 60px;
+}
+
+.content{
+    transform: translate(0%,-10%);
+    background-color: #212121;
+}
+
+.content h5{
+    color: white;
+    font-size: 22px;
+    transform: translate(47%,-900%);
+}
+
+.content p{
+    color: white;
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 400;
+    letter-spacing: 0,7px;
+    transform: translate(47%,-100%);
+}
+
+.link a{
+    position: relative;
+    left: 635px;
+    top: -200px;
+    text-decoration:none ;
+    color:#C8362C;
+    font-family: 'Quicksand', sans-serif;
+ }
+
+ .link i{
+    position: absolute;
+    left: 770px;
+    top: 525px;
+
+    color:#C8362C;
+}
+
+.link i :hover{
+    width: 0px;
+    
+}
+.skills-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    transform: translate(0%,-10%);
+}
+.skills h1{
+    transform: translate(80%,-50%);
+    font-size: 50px;
+}
+.skills{
+    width: 500px;
+    position: relative;
+    left: -30px;
+    color: white;
+   
+}
+
+
+
+.skills li {
+    margin: 20px 0;
+}
+
+.skills1{
+    width: 500px;
+    position: relative;
+    right: -30px;
+    top: 30px;    
+   
+    color: white;  
+     
+}
+
+
+
+.skills1 li {
+    margin: 20px 0;
+}
+
+.bar{
+    background: #353b48;
+    display: block;
+    height: 5px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #551b00b3;
+
+}
+
+.bar span{
+    height: 2px;
+    float: left;
+    background-color:coral;
+}
+
+.html{
+    width: 90%;
+    animation: html 2s;
+}
+
+.css{
+    width: 80%;
+    animation: css 2s;
+}
+
+.javascript{
+    width: 60%;
+    animation: javascript 2s;
+}
+
+.php{
+    width: 50%;
+    animation: php 2s;
+}
+.design{
+    width: 70%;
+    animation: design 2s;
+}
+.editor{
+    width: 80%;
+    animation: editor 2s;
+}
+@keyframes html{
+    0%{
+       width: 0%; 
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes css{
+    0%{
+       width: 0%; 
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes javascript{
+    0%{
+       width: 0%; 
+    }
+    100%{
+        width: 60%;
+    }
+}
+@keyframes php{
+    0%{
+       width: 0%; 
+    }
+    100%{
+        width: 50%;
+    }
+}
+@keyframes design{
+    0%{
+       width: 0%; 
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes editor{
+    0%{
+       width: 0%; 
+    }
+    100%{
+        width: 80%;
+    }
+}
+.worked{
+    background-color:black;
+    height: 700px;
+    transform: translate(0%,-20%);
+  
+}
+.worked h5{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    transform: translate(0%,475%);
+}
+.fill{
+   width: 85%;
+   transform: translate(15%,114%);
+   border-bottom: 2px;
+   
+   
+   
+}
+
+.img01 img{
+    width: 130px;
+    height: 65px;
+    margin-right: 80px;
+    margin-bottom: 60px;
+    
+}
+.splide-img{
+    background-color: #141414;
+    height: 657px;
+    transform: translate(0%,-40%);
+}
+.splide-header{
+    display: flex;
+    flex-direction: row;
+}
+.splide_list ul{
+    transform: translate(0%,200%);
+}
+
+.Work{
+    transform: translate(0%,-38%);
+    background-image: url(./image/kari-shea-1SAnrIxw5OY-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 800px;
+    background-color: rgba(0,0,0,0.9);
+    opacity: 1;
+   
+}
+   
+
+.overlay{
+    background-color: rgba(0,0,0,0.9);
+    opacity: 1;
+    position: absolute;
+	top: 0;left:0;right:0;bottom:0;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(0%,0%);
+}
+
+.work-trap{
+    transform: rotate(45deg) translate(80%,450%);
+    width: 80px;
+    height: 80px;
+    background-color:#1E1E1E
+}
+
+.work-icons{
+    transform: rotate(-45deg);
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+.title h6{
+    transform: rotate(-45deg) translate(30%,450%);
+    color:#A32B21;
+}
+
+.title p{
+    transform: rotate(-45deg) translate(10%,100%);
+    width: 250px;
+    color: white;
+}
+
+.comment{
+    background-color: #212121;
+    transform: translate(0%,-70%);
+    height: 600px;
+}
+
+.form-icons{
+    background-color: #4C4C4C;
+    width: 45px;
+    height: 45px;
+    transform: rotate(45deg) translate(20%,950%);
+    margin-left: 20px;
+    position: relative;
+    left: 420px;
+    
+}
+
+.form-icons i{
+    position: absolute;
+    z-index:2;
+    top: 30px;
+    transform: rotate(-45deg) translate(150%,-20%);   
+    
+}
+
+.footer-icons{
+    background-color: #4C4C4C;
+    width: 45px;
+    height: 45px;
+    transform: rotate(45deg) translate(-30%,-30%);
+    position: relative;
+}
+
+.footer-icons i{
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    color: white;
+    font-size: 20px;
+    transform: rotate(-45deg) translate(90%,0%);
+}

@@ -1,0 +1,58 @@
+<html>
+  <head>
+  	<title>JS | Aplikasi Sederhana</title>
+  	<style>
+  		body{
+  		   font-family:sans-serif;
+  		}
+  		h1{
+  		   text-align:Center;
+  		   
+  		}
+  		
+  		h3{
+  		   font-size:35px;
+  		}
+  		
+  		input{
+  		   padding: 7px 20px;
+  		}
+  		
+  		span{
+		   font-weight:bold;  		
+  		}
+  		`
+  	</style>
+  </head>
+  <body>
+  	<h1>Pertemuan 10 | Aplikasi sederhana</h1>
+  	<h3>Persegi</h3>
+  	<input id ="inputPersegi" type="number" placeholder="Panjang Sisi" onkeyup="hitungluasPersegi()" />
+  	<p>Luas Persegi Panjang= <span id="luasPersegi">0cm</span> </p>
+  	
+  	<hr/>
+  	
+  	<h3>Persegi</h3>
+  	<input id="inputPersegiPanjangT" type="number" placeholder="Panjang Tinggi"/>
+  	<input id="inputPersegiPanjangL" type="number" placeholder="Panjang Lebar"/>
+  	<button onclick="hitungLuasPerPan()">Hitung!</button>
+  	<p>Luas Persegi = <span id="luasPersegiPanjang">0cm</span> </p>
+  	<script>
+  	
+	 var inPersegi = document.getElementById("inputPersegi");  	
+	 var LPersegi = document.getElementById("luasPersegi");
+	 
+	 var inPerPanT = document.getElementById("inputPersegiPanjangT");
+	 var inPerPanL = document.getElementById("inputPersegiPanjangL");
+      	 var LPerPan = document.getElementById("luasPersegiPanjang");
+	  	
+  	 function hitungluasPersegi(){
+  	 	LPersegi.innerHTML = (inPersegi.value * (9/5)  + 32) + "m<sup>2</sup>";
+  	 }
+  	 
+  	 function hitungLuasPerPan(){
+  	 	LPerPan.innerHTML = (inPerPanT.value * inPerPanL.value) + "cm";
+  	 }
+  	</script>
+  </body>
+</html>

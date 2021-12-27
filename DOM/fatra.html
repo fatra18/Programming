@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #warna{
+            background-color: aqua;
+            width: 0%;
+            height:0%;
+        }
+        
+        #box {
+            width:0px;
+            height:0px;
+            background-color:#fff;
+            transition:all 1000ms;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            transform: translate(0%,80%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Javascript V2 muji </h1>
+    <button onclick="step1()">Step1</button>
+    <button onclick="step2()">Step2</button>
+    <button onclick="step3()">Step3</button>
+    <button onclick="step4()">Step4</button>
+    <button onclick="step5()">Step5</button>
+    <hr>
+    <div id="warna">
+
+    </div>
+    <script>
+          var bumi = document.getElementById("bumi");
+          var box = document.getElementById("box");
+         
+          function step1(){
+            warna.style.backgroundColor="silver";
+            warna.style.width="100%";
+            warna.style.height="1000px";
+            warna.style.transform="translate(0%.-70%)";
+        }
+        function step2(){
+            box.style.width ="30%";
+            box.style.height ="290px";
+            box.style.backgroundColor ="green";
+            box.style.margin="auto";
+            box.style.marginTop="40px";
+        }
+    </script>
+</body>
+</html>

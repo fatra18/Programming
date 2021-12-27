@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Choices</title>
+    <!-- choices css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <!--choices script -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+</head>
+<body>
+    <p>Choices Single</p>
+    <input type="text" id="single-element">
+    <select name="" id="multiple-select" multiple>
+        <option value="honda">honda</option>    
+        <option value="honda">honda</option>      
+        <option value="honda">honda</option>    
+    </select>
+
+    <script>
+        const single = new Choices(document.getElementById('single-element'), {
+            editItems:true,
+            removeItemButton:true,
+        });
+        const multiple = new Choices(document.getElementById('multiple-select'), {
+            removeItemButton:true,
+        });    
+
+    </script>
+    
+</body>
+</html>
